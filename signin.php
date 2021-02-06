@@ -14,12 +14,12 @@
 
     <form action="sigup.php" class="form-group" method="POST">
       <label for="userName">User Name:</label>
-      <input type="userName" class="form-control" id="userName" name="userName" placeholder="Your name">
+      <input type="text" class="form-control" id="userName" name="userName" placeholder="Your name" required>
       <label for="email">Email address:</label>
-      <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+      <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
       <label for="password">Password: </label>
-      <input type="password" class="form-control" id="password" name="password">
-      <input type="submit" value="Create Account">
+      <input type="password" class="form-control" id="password" name="password" required>
+      <input type="submit" value="Create Account" class="btn btn-primary mb-2">
     </form>
 
     <div class="alert alert-dismissible alert-warning">
