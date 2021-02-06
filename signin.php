@@ -12,8 +12,14 @@
   <main class="container container-fluid mt-4">
     <h1 class="display-5 text-center font-weight-bold mb-4">Create an Account</h1>
 
-    <form action="" class="form-group">
-
+    <form action="sigup.php" class="form-group" method="POST">
+      <label for="userName">User Name:</label>
+      <input type="userName" class="form-control" id="userName" name="userName" placeholder="Your name">
+      <label for="email">Email address:</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+      <label for="password">Password: </label>
+      <input type="password" class="form-control" id="password" name="password">
+      <input type="submit" value="Create Account">
     </form>
 
     <div class="alert alert-dismissible alert-warning">
@@ -23,13 +29,15 @@
     </div>
     <?php
       require('db/connection.php');
-
-      foreach ($db->query('SELECT *  FROM users') as $row)
-      {
-        echo 'User: ' . $row['user_name'];
-        echo ' E-mail: ' . $row['user_email'];
-        echo '<br/>';
+      if(isset($db)){
+        foreach ($db->query('SELECT *  FROM users') as $row)
+        {
+          echo 'User: ' . $row['user_name'];
+          echo ' E-mail: ' . $row['user_email'];
+          echo '<br/>';
+        }
       }
+      
     ?>
   </main>
 
