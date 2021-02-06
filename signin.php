@@ -11,9 +11,19 @@
 
   <main class="container container-fluid mt-4">
     <h1 class="display-5 text-center font-weight-bold mb-4">Create an Account</h1>
+
+    <form action="" class="form-group">
+
+    </form>
+
+    <div class="alert alert-dismissible alert-warning">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <h4 class="alert-heading">Warning!</h4>
+      <p class="mb-0">Temporarily you will be able to see the list of users  just to test the database.</p>
+    </div>
     <?php
       require('db/connection.php');
-      
+
       foreach ($db->query('SELECT *  FROM users') as $row)
       {
         echo 'User: ' . $row['user_name'];
