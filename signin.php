@@ -11,33 +11,15 @@
 
   <main class="container container-fluid mt-4">
     <h1 class="display-5 text-center font-weight-bold mb-4">Create an Account</h1>
-
     <?php
-      echo "hello";
-      try {
-        $dbUrl = getenv('DATABASE_URL');
-        $dbOpts = parse_url($dbUrl);
-        $dbHost = $dbOpts["host"];
-        $dbPort = $dbOpts["port"];
-        $dbUser = $dbOpts["user"];
-        $dbPassword = $dbOpts["pass"];
-        $dbName = ltrim($dbOpts["path"],'/');
-      
-        $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-      
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      } catch (PDOException $ex) {
-        echo 'Error!: ' . $ex->getMessage();
-        die();
-      }
+      require('db/connection.php');
       
       foreach ($db->query('SELECT *  FROM users') as $row)
       {
-        echo 'user: ' . $row['user_name'];
-        echo ' password: ' . $row['password'];
+        echo 'User: ' . $row['user_name'];
+        echo ' E-mail: ' . $row['user_email'];
         echo '<br/>';
       }
-
     ?>
   </main>
 
