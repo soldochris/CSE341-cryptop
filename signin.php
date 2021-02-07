@@ -12,7 +12,7 @@
   <main class="container container-fluid mt-4">
     <h1 class="display-5 text-center font-weight-bold mb-4">Create an Account</h1>
 
-    <form action="sigup.php" class="form-group" method="POST">
+    <form action="signup.php" class="form-group" method="POST">
       <label for="userName">User Name:</label>
       <input type="text" class="form-control" id="userName" name="userName" placeholder="Your name" required>
       <label for="email">Email address:</label>
