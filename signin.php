@@ -19,7 +19,7 @@
       <input type="email" class="form-control" id="userEmail" name="userEmail" placeholder="name@example.com" required>
       <label for="password">Password: </label>
       <input type="password" class="form-control" id="password" name="password" required>
-      <input type="submit" value="Create Account" class="btn btn-primary mb-2">
+      <input type="submit" value="Create Account" class="btn btn-primary mb-2 mt-2">
     </form>
 
     <div class="alert alert-dismissible alert-warning">

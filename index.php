@@ -47,7 +47,7 @@
     <h1 class="display-5 text-center font-weight-bold mb-4">Top 10 cryptocurrencies</h1>
     <div id="topCoins" class="container-sm d-flex flex-wrap justify-content-around"></div>
     <div class="container container-fluid mx-auto" style="width: 300px;">
-      <a href="allcoins.html" class="btn btn-secondary btn-lg btn-block">Show Top 100 Coins >></a>
+      <a href="top100.php" class="btn btn-secondary btn-lg btn-block">Show Top 100 Coins >></a>
     </div>
     </main>
   <?php require_once('modules/footer.php') ?>
