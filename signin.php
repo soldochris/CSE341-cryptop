@@ -15,8 +15,8 @@
     <form action="signup.php" class="form-group" method="POST">
       <label for="userName">User Name:</label>
       <input type="text" class="form-control" id="userName" name="userName" placeholder="Your name" required>
-      <label for="email">Email address:</label>
-      <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+      <label for="userEmail">Email address:</label>
+      <input type="email" class="form-control" id="userEmail" name="userEmail" placeholder="name@example.com" required>
       <label for="password">Password: </label>
       <input type="password" class="form-control" id="password" name="password" required>
       <input type="submit" value="Create Account" class="btn btn-primary mb-2">
