@@ -4,10 +4,10 @@
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="allcoins.html">Top 100</a>
+            <a class="nav-link" href="top100.php">Top 100</a>
           </li>
         </ul>
       </div>
