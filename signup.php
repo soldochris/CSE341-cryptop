@@ -12,12 +12,12 @@
   $stmt = $db->prepare($sql);
   $stmt->bindValue(':user_name', $userName, PDO::PARAM_STR);
   $stmt->bindValue(':user_email', $userEmail, PDO::PARAM_STR);
-  $stmt->bindValue(':user_pass', $userPass, PDO::PARAM_STR);
+  $stmt->bindValue(':user_pass', $hashedPass, PDO::PARAM_STR);
 
   $stmt->execute();
 
   $stmt->closeCursor();
 
-  header('Location: ./signup.php');
+  header('Location: signin.php');
 
 ?>
