@@ -42,7 +42,7 @@
         require('functions.php');
         $userCoins = getFavCoins($_SESSION['userData']['user_id']);
         echo '<br>';
-        var_dump($userCoins);
+        //var_dump($userCoins);
       ?>
     </ul>
     <p>Add a coin to your favorites:</p>
