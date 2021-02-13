@@ -44,8 +44,8 @@
     <?php
       $coins = json_decode( file_get_contents('https://api.coinlore.net/api/tickers/'), true );
       //var_dump($coins['data'][0]['name']);
-      for($i = 0; $i < count($coins); $i++){
-        echo $coins['data'][$i]['name'];
+      for($i = 0; $i < count($coins['data']); $i++){
+        echo $coins['data'][$i]['name'] . '<br>';
       }
 
     ?>
