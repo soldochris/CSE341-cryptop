@@ -1,9 +1,9 @@
 <?php
   session_start();
+  require('functions.php');
 
   if(isset($_POST['loggin'])){
   
-    require('functions.php');
     $userEmail = filter_input(INPUT_POST, 'userEmail', FILTER_SANITIZE_EMAIL);
     $userEmail = checkEmail($userEmail);
     $userPass = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
@@ -19,8 +19,6 @@
     $_SESSION['userData'] = $userData;
 
   }
-
-  
 
 ?>
 <!DOCTYPE html>
