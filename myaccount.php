@@ -38,8 +38,13 @@
     <ul>
       <?php 
         $userCoins = getFavCoins($_SESSION['userData']['user_id']);
-        echo '<br>';
-        var_dump($userCoins);
+        if($userCoins){
+          var_dump($userCoins);
+        }else{
+          var_dump($userCoins);
+          echo "you don't have favorite coins";
+        }
+        
       ?>
     </ul>
     <p>Add a coin to your favorites:</p>
