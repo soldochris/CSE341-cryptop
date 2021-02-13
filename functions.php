@@ -32,7 +32,7 @@ function addFavCoin($newFav, $coinName, $userId){
 
 function getFavCoins($userId){
   require('db/connection.php');
-  $sql = 'SELECT fav_id, coin_id
+  $sql = 'SELECT fav_id, coin_id, coin_name
           FROM coins
           WHERE user_id = :userId';
   $stmt = $db->prepare($sql);
