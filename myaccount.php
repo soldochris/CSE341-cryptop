@@ -45,7 +45,7 @@
       $coins = json_decode( file_get_contents('https://api.coinlore.net/api/tickers/'), true );
       //var_dump($coins['data'][0]['name']);
       for($i = 0; $i < count($coins['data']); $i++){
-        echo "<span>". $coins['data'][$i]['name'] ."</span> <a href='#' class='btn btn-info btn-sm'>Add to favorites</a> <br>";
+        echo "<span class='mt-3'>". $coins['data'][$i]['name'] ."</span> <a href='myaccount.php?coin={$coins['data'][$i]['id']}' class='btn btn-info btn-sm'>Add to favorites</a> <br>";
       }
 
     ?>
