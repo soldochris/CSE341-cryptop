@@ -17,6 +17,7 @@
       <input type="email" class="form-control" id="userEmail" name="userEmail" placeholder="name@example.com" required>
       <label for="password">Password: </label>
       <input type="password" class="form-control" id="password" name="password" required>
+      <input type="hidden" name="loggin">
       <input type="submit" value="Log in" class="btn btn-primary mb-2 mt-2">
     </form>
   </main>
