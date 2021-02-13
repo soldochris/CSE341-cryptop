@@ -36,7 +36,7 @@
   <?php require_once('modules/navbar.php'); ?>
 
   <main class="container container-fluid mt-4">
-    <?php var_dump($_SESSION['userData'); ?>
+    <?php var_dump($_SESSION['userData']); ?>
   </main>
 
   <?php require_once('modules/footer.php'); ?>
