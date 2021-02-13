@@ -41,7 +41,7 @@
         if($userCoins){
           var_dump($userCoins);
         }else{
-          //var_dump($userCoins);
+          var_dump($userCoins);
           echo "you don't have favorite coins";
         }
         
