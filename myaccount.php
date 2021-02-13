@@ -40,12 +40,12 @@
     <p>Your favorite coins are:</p>
     <ul>
     </ul>
-    <p>Add a coin to your favorite</p>
+    <p>Add a coin to your favorites:</p>
     <?php
       $coins = json_decode( file_get_contents('https://api.coinlore.net/api/tickers/'), true );
       //var_dump($coins['data'][0]['name']);
       for($i = 0; $i < count($coins['data']); $i++){
-        echo $coins['data'][$i]['name'] . '<br>';
+        echo "<p>". $coins['data'][$i]['name'] ."</p> <a href='#'>Add to favorites</a> <br>";
       }
 
     ?>
