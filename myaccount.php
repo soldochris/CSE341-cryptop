@@ -6,22 +6,20 @@
   $userEmail = filter_input(INPUT_POST, 'userEmail', FILTER_SANITIZE_EMAIL);
   $userEmail = checkEmail($userEmail);
   $userPass = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
-
   $userData = getUser($userEmail);
-
   $hashCheck = password_verify($userPass, $userData['user_pass']);
-
   if($hashCheck == FALSE){
     $message = "<p>worng password</p>";
     echo $message;
     exit;
   }
-
   $_SESSION['loggedin'] = TRUE;
-
   array_pop($userData);
-
   $_SESSION['userData'] = $userData;
+
+  if(isset($_GET['coin'])){
+    $newFav = $_GET['coin'];
+  }
 
 ?>
 <!DOCTYPE html>
@@ -39,13 +37,14 @@
     <h2>Welcome <?php echo $_SESSION['userData']['user_name']; ?></h2>
     <p>Your favorite coins are:</p>
     <ul>
+      <?php echo $newFav?>
     </ul>
     <p>Add a coin to your favorites:</p>
     <?php
       $coins = json_decode( file_get_contents('https://api.coinlore.net/api/tickers/'), true );
       //var_dump($coins['data'][0]['name']);
       for($i = 0; $i < count($coins['data']); $i++){
-        echo "<span class='mt-3'>". $coins['data'][$i]['name'] ."</span> <a href='myaccount.php?coin={$coins['data'][$i]['id']}' class='btn btn-info btn-sm'>Add to favorites</a> <br>";
+        echo "<span class='mt-4'>". $coins['data'][$i]['name'] ."</span> <a href='myaccount.php?coin={$coins['data'][$i]['id']}' class='btn btn-info btn-sm'>Add to favorites</a> <br>";
       }
 
     ?>
