@@ -37,6 +37,13 @@
 
   <main class="container container-fluid mt-4">
     <h2>Welcome <?php echo $_SESSION['userData']['user_name']; ?></h2>
+    <p>Your favorite coins are:</p>
+    <ul>
+    </ul>
+    <p>Add a coin to your favorite</p>
+    <?php
+      echo file_get_contents('https://api.coinlore.net/api/ticker/?id=90');
+    ?>
     <?php var_dump($_SESSION['userData']); ?>
   </main>
 
