@@ -4,8 +4,8 @@
     require('functions.php');
 
     $newFav = $_GET['coin'];
-    echo $newFav;
-    echo $_SESSION['userData']['user_id'];;
+    $userId = $_SESSION['userData']['user_id'];;
+    addFavCoin($newFav, $userId);
   }
 
 ?>

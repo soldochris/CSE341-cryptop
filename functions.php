@@ -18,7 +18,13 @@ function getuser($userEmail){
   return $userData;
 }
 
-function addFavCoin(){
-
-
+function addFavCoin($newFav,$nuserId){
+  require('db/connection.php');
+  $sql = 'INSERT INTO coins (coin, user_id)
+          VALUES (:coin, :user_id)';
+  $stmt = $db->prepare($sql);
+  $stmt->bindValue(':coin', $newFav, PDO::PARAM_INT);
+  $stmt->bindValue(':user_id', $nuserId, PDO::PARAM_INT);
+  $stmt->execute();
+  $stmt->closeCursor();
 }
