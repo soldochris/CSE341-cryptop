@@ -17,10 +17,6 @@
   array_pop($userData);
   $_SESSION['userData'] = $userData;
 
-  if(isset($_GET['coin'])){
-    $newFav = $_GET['coin'];
-  }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

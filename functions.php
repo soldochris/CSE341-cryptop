@@ -17,3 +17,8 @@ function getuser($userEmail){
   $stmt->closeCursor();
   return $userData;
 }
+
+function addFavCoin(){
+
+
+}
