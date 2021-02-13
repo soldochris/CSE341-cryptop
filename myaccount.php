@@ -1,7 +1,7 @@
 <?php
   session_start();
 
-  require_once 'functions.php';
+  require('functions.php');
 
   $userEmail = filter_input(INPUT_POST, 'userEmail', FILTER_SANITIZE_EMAIL);
   $userEmail = checkEmail($userEmail);
