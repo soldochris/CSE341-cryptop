@@ -43,9 +43,10 @@
     <p>Add a coin to your favorite</p>
     <?php
       $coins = json_decode( file_get_contents('https://api.coinlore.net/api/tickers/'), true );
-      var_dump($coins);
+      var_dump($coins['data']);
     ?>
-    <?php var_dump($_SESSION['userData']); ?>
+
+    <?php //var_dump($_SESSION['userData']); ?>
   </main>
 
   <?php require_once('modules/footer.php'); ?>
