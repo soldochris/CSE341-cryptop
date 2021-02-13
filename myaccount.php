@@ -36,6 +36,7 @@
   <?php require_once('modules/navbar.php'); ?>
 
   <main class="container container-fluid mt-4">
+    <h2>Welcome <?php echo $_SESSION['userData']['user_name']; ?></h2>
     <?php var_dump($_SESSION['userData']); ?>
   </main>
 
