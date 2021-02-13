@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crypto - Top 100</title>
+  <title>Crypto - Login</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -12,34 +12,13 @@
   <main class="container container-fluid mt-4">
     <h1 class="display-5 text-center font-weight-bold mb-4">Create an Account</h1>
 
-    <form action="signup.php" class="form-group" method="POST">
-      <label for="userName">User Name:</label>
-      <input type="text" class="form-control" id="userName" name="userName" placeholder="Your name" required>
+    <form action="myaccount.php" class="form-group" method="POST">
       <label for="userEmail">Email address:</label>
       <input type="email" class="form-control" id="userEmail" name="userEmail" placeholder="name@example.com" required>
       <label for="password">Password: </label>
       <input type="password" class="form-control" id="password" name="password" required>
-      <input type="submit" value="Create Account" class="btn btn-primary mb-2 mt-2">
-      <a  class="btn btn-success mb-2 mt-2" href="login.php">Log In</a>
+      <input type="submit" value="Log in" class="btn btn-primary mb-2 mt-2">
     </form>
-
-    <div class="alert alert-dismissible alert-warning">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <h4 class="alert-heading">Warning!</h4>
-      <p class="mb-0">Temporarily you will be able to see the list of users  just to test the database.</p>
-    </div>
-    <?php
-      require('db/connection.php');
-      if(isset($db)){
-        foreach ($db->query('SELECT *  FROM users') as $row)
-        {
-          echo 'User: ' . $row['user_name'];
-          echo ' E-mail: ' . $row['user_email'];
-          echo '<br/>';
-        }
-      }
-      
-    ?>
   </main>
 
   <?php require_once('modules/footer.php'); ?>
