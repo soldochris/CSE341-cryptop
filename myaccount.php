@@ -40,7 +40,7 @@
       if($userCoins){
         var_dump($userCoins);
         echo "<ul>";
-        for($i = 0;$i < count($userCoins); $i++){
+        for($i = 0;$i < sizeOf($userCoins); $i++){
           echo "<li><a href='#'>{$userCoins[$i]}</a><a href='#'>Delete</a><li>";
         }
         echo "<ul>";
