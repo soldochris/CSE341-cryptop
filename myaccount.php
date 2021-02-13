@@ -42,7 +42,8 @@
     </ul>
     <p>Add a coin to your favorite</p>
     <?php
-      echo file_get_contents('https://api.coinlore.net/api/ticker/?id=90');
+      $coins = json_decode( file_get_contents('https://api.coinlore.net/api/tickers/'), true );
+      var_dump($coins);
     ?>
     <?php var_dump($_SESSION['userData']); ?>
   </main>
