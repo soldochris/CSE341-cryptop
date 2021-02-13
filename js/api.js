@@ -162,6 +162,11 @@ fetch(urlApi_topTen)
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <?php 
+                if((isset($_SESSION['userData'])){
+                  echo $_SESSION['userData']['user_name'];
+                }
+              ?>
             </div>
           </div>
         </div>
