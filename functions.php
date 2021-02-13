@@ -20,10 +20,10 @@ function getuser($userEmail){
 
 function addFavCoin($newFav,$userId){
   require('db/connection.php');
-  $sql = 'INSERT INTO coins (coin, user_id)
-          VALUES (:coin, :user_id)';
+  $sql = 'INSERT INTO coins (coin_id, user_id)
+          VALUES (:coin_id, :user_id)';
   $stmt = $db->prepare($sql);
-  $stmt->bindValue(':coin', $newFav, PDO::PARAM_INT);
+  $stmt->bindValue(':coin_id', $newFav, PDO::PARAM_INT);
   $stmt->bindValue(':user_id', $userId, PDO::PARAM_INT);
   $stmt->execute();
   $stmt->closeCursor();
