@@ -39,6 +39,7 @@
     <p>Your favorite coins are:</p>
     <ul>
       <?php 
+        require('functions.php');
         $userCoins = getFavCoins($_SESSION['userData']['user_id']);
         echo '<br>';
         var_dump($userCoins);

@@ -7,7 +7,8 @@ create table users (
 
 
 CREATE TABLE coins(
-    coin int NOT NULL,
+		fav_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    coin_id int NOT NULL,
     user_id int references users(user_id) NOT NULL
 );
 
