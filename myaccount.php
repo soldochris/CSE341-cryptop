@@ -41,23 +41,23 @@
         //var_dump($userCoins);
         echo "<ul>";
         for($i = 0;$i < sizeOf($userCoins); $i++){
-          echo "<li class='mb-4'><a href='#' class='mr-3'>{$userCoins[$i]['coin_name']}</a><a href='#' class='btn btn-danger btn-sm'>Delete</a></li>";
+          echo "<li class='mb-3'><a href='#' class='mr-2'>{$userCoins[$i]['coin_name']}</a><a href='#' class='btn btn-danger btn-sm'>Delete</a></li>";
         }
         echo "</ul>";
       }else{
-        var_dump($userCoins);
-        echo "you don't have favorite coins";
+        //var_dump($userCoins);
+        echo "<p class='text-danger'>You still don't have favorite coins. Please select coins from the following list.</p>";
       }
       
     ?>
     <p>Add a coin to your favorites:</p>
     <?php
       $coins = json_decode( file_get_contents('https://api.coinlore.net/api/tickers/'), true );
-      //var_dump($coins['data']);
+      echo "<ul>";
       for($i = 0; $i < count($coins['data']); $i++){
-        echo "<span class='mt-4'>". $coins['data'][$i]['name'] ."</span> <a href='addFav.php?coin={$coins['data'][$i]['id']}&name={$coins['data'][$i]['name']}' class='btn btn-info btn-sm'>Add to favorites</a> <br>";
+        echo "<li class='mt-4'>". $coins['data'][$i]['name'] ."</span> <a href='addFav.php?coin={$coins['data'][$i]['id']}&name={$coins['data'][$i]['name']}' class='btn btn-info btn-sm'>Add to favorites</li>";
       }
-
+      echo "</ul>";
     ?>
 
     <?php //var_dump($_SESSION['userData']); ?>
