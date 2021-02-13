@@ -41,9 +41,9 @@
         var_dump($userCoins);
         echo "<ul>";
         for($i = 0;$i < sizeOf($userCoins); $i++){
-          echo "<li><a href='#'>{$userCoins[$i]}</a><a href='#'>Delete</a><li>";
+          echo "<li><a href='#'>{$userCoins[$i]['coin_id']}</a><a href='#'>Delete</a></li>";
         }
-        echo "<ul>";
+        echo "</ul>";
       }else{
         var_dump($userCoins);
         echo "you don't have favorite coins";
