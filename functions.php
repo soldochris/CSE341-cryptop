@@ -18,13 +18,26 @@ function getuser($userEmail){
   return $userData;
 }
 
-function addFavCoin($newFav,$nuserId){
+function addFavCoin($newFav,$userId){
   require('db/connection.php');
   $sql = 'INSERT INTO coins (coin, user_id)
           VALUES (:coin, :user_id)';
   $stmt = $db->prepare($sql);
   $stmt->bindValue(':coin', $newFav, PDO::PARAM_INT);
-  $stmt->bindValue(':user_id', $nuserId, PDO::PARAM_INT);
+  $stmt->bindValue(':user_id', $userId, PDO::PARAM_INT);
   $stmt->execute();
   $stmt->closeCursor();
+}
+
+function getFavCoins($userId){
+  require('db/connection.php');
+  $sql = 'SELECT coin
+          FROM coins
+          WHERE user_id = :userId';
+  $stmt = $db->prepare($sql);
+  $stmt->bindValue(':userId', $userId, PDO::PARAM_INT);
+  $stmt->execute();
+  $userCoins = $stmt->fetch(PDO::FETCH_ASSOC);
+  $stmt->closeCursor();
+  return $userCoins;
 }

@@ -33,7 +33,11 @@
     <h2>Welcome <?php echo $_SESSION['userData']['user_name']; ?></h2>
     <p>Your favorite coins are:</p>
     <ul>
-      <?php echo $newFav?>
+      <?php 
+        $userCoins = getFavCoins($_SESSION['userData']['user_id']);
+        echo '<br>';
+        var_dump($userCoins);
+      ?>
     </ul>
     <p>Add a coin to your favorites:</p>
     <?php
