@@ -1,5 +1,4 @@
 <?php
-require('db/connection.php');
 
 function checkEmail($userEmail){
   $valEmail = filter_var($userEmail, FILTER_VALIDATE_EMAIL);
@@ -7,6 +6,7 @@ function checkEmail($userEmail){
 }
 
 function getuser($userEmail){
+  require('db/connection.php');
   $sql = 'SELECT user_id, user_name, user_email, user_pass 
           FROM users
           WHERE user_email = :userEmail';
