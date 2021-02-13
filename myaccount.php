@@ -35,18 +35,21 @@
   <main class="container container-fluid mt-4">
     <h2>Welcome <?php echo $_SESSION['userData']['user_name']; ?></h2>
     <p>Your favorite coins are:</p>
-    <ul>
-      <?php 
-        $userCoins = getFavCoins($_SESSION['userData']['user_id']);
-        if($userCoins){
-          var_dump($userCoins);
-        }else{
-          var_dump($userCoins);
-          echo "you don't have favorite coins";
+    <?php 
+      $userCoins = getFavCoins($_SESSION['userData']['user_id']);
+      if($userCoins){
+        //var_dump($userCoins);
+        echo "<ul>";
+        for($i = 0;$i < count($userCoins); $i++){
+          echo "<li><a href='#'>{$userCoins[$i]}</a><a href='#'>Delete</a><li>";
         }
-        
-      ?>
-    </ul>
+        echo "<ul>";
+      }else{
+        //var_dump($userCoins);
+        echo "you don't have favorite coins";
+      }
+      
+    ?>
     <p>Add a coin to your favorites:</p>
     <?php
       $coins = json_decode( file_get_contents('https://api.coinlore.net/api/tickers/'), true );
