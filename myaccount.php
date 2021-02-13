@@ -39,13 +39,13 @@
       <?php 
         $userCoins = getFavCoins($_SESSION['userData']['user_id']);
         echo '<br>';
-        //var_dump($userCoins);
+        var_dump($userCoins);
       ?>
     </ul>
     <p>Add a coin to your favorites:</p>
     <?php
       $coins = json_decode( file_get_contents('https://api.coinlore.net/api/tickers/'), true );
-      var_dump($coins['data']);
+      //var_dump($coins['data']);
       for($i = 0; $i < count($coins['data']); $i++){
         echo "<span class='mt-4'>". $coins['data'][$i]['name'] ."</span> <a href='addFav.php?coin={$coins['data'][$i]['id']}' class='btn btn-info btn-sm'>Add to favorites</a> <br>";
       }
