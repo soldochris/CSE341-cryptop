@@ -38,10 +38,10 @@
     <?php 
       $userCoins = getFavCoins($_SESSION['userData']['user_id']);
       if($userCoins){
-        var_dump($userCoins);
+        //var_dump($userCoins);
         echo "<ul>";
         for($i = 0;$i < sizeOf($userCoins); $i++){
-          echo "<li><a href='#'>{$userCoins[$i]['coin_name']}</a><a href='#' class='btn btn-danger btn-sm'>Delete</a></li>";
+          echo "<li class='mb-4'><a href='#' class='mr-3'>{$userCoins[$i]['coin_name']}</a><a href='#' class='btn btn-danger btn-sm'>Delete</a></li>";
         }
         echo "</ul>";
       }else{
