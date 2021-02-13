@@ -37,7 +37,7 @@ function getFavCoins($userId){
   $stmt = $db->prepare($sql);
   $stmt->bindValue(':userId', $userId, PDO::PARAM_INT);
   $stmt->execute();
-  $userCoins = $stmt->fetch(PDO::FETCH_ASSOC);
+  $userCoins = $stmt->fetch(PDO::FETCH_ALL);
   $stmt->closeCursor();
   return $userCoins;
 }
