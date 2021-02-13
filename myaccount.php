@@ -38,14 +38,14 @@
     <?php 
       $userCoins = getFavCoins($_SESSION['userData']['user_id']);
       if($userCoins){
-        //var_dump($userCoins);
+        var_dump($userCoins);
         echo "<ul>";
         for($i = 0;$i < count($userCoins); $i++){
           echo "<li><a href='#'>{$userCoins[$i]}</a><a href='#'>Delete</a><li>";
         }
         echo "<ul>";
       }else{
-        //var_dump($userCoins);
+        var_dump($userCoins);
         echo "you don't have favorite coins";
       }
       
