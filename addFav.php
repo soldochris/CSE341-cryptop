@@ -4,8 +4,11 @@
     require('functions.php');
 
     $newFav = $_GET['coin'];
-    $userId = $_SESSION['userData']['user_id'];;
-    addFavCoin($newFav, $userId);
+    $coinName = $_GET['name'];
+    $userId = $_SESSION['userData']['user_id'];
+    
+
+    addFavCoin($newFav, $coinName, $userId);
     header('Location: myaccount.php');
   }
 
