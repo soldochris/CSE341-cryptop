@@ -1,5 +1,5 @@
 <?php
-require_once 'db/connection.php';
+require('db/connection.php');
 
 function checkEmail($userEmail){
   $valEmail = filter_var($userEmail, FILTER_VALIDATE_EMAIL);
