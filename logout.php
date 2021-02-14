@@ -5,5 +5,5 @@
     session_destroy();
     header('Location: signin.php');
   }else{
-    header('Location: myaccount.php');
+    header('Location: signin.php');
   }

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crypto - Login</title>
+  <title>Cryptop - Login</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -17,7 +17,7 @@
       <label for="password">Password: </label>
       <input type="password" class="form-control" id="password" name="password" required>
       <input type="hidden" name="loggin">
-      <input type="submit" value="Log in" class="btn btn-primary mb-2 mt-2">
+      <input type="submit" value="Log in" class="btn btn-primary mb-2 mt-3">
     </form>
   </main>
 
