@@ -10,8 +10,7 @@
   <?php require_once('modules/navbar.php'); ?>
 
   <main class="container container-fluid mt-4">
-    <h1 class="display-5 text-center font-weight-bold mb-4">Create an Account</h1>
-
+    <h1 class="display-5 text-center font-weight-bold mb-4 mt-4">Log In</h1>
     <form action="myaccount.php" class="form-group" method="POST">
       <label for="userEmail">Email address:</label>
       <input type="email" class="form-control" id="userEmail" name="userEmail" placeholder="name@example.com" required>
