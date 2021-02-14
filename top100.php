@@ -9,16 +9,26 @@
 <body>
   <?php require_once('modules/navbar.php') ?>
   <main class="container container-fluid mt-4">
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h3 class="display-4 text-center">Cooming Soon</h3>
-        <p>We are working to display the top 100 cryptocurrencies here.</p>
-        <hr class="my-4">
-        <p>Please create an account.</p>
-        <a class="btn btn-primary btn-lg" href="signin.php" role="button">Sign In</a>
-      </div>
-    </div>
     <h1 class="display-5 text-center font-weight-bold mb-4">Top 100 cryptocurrencies</h1>
+    <div class="table-responsive">
+      <table class="table table-striped table-hover table-sm border border-primary">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col"></th>
+            <th scope="col">Coin</th>
+            <th scope="col">Price</th>
+            <th scope="col">Market Cap</th>
+            <th scope="col">1h</th>
+            <th scope="col">24h</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+        <div id="modals"></div>
+      </table>
+    </div>
     </main>
   <?php require_once('modules/footer.php') ?>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
