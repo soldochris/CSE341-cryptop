@@ -11,6 +11,11 @@
         <li class="nav-item">
           <a class="nav-link" href="top100.php">Top 100</a>
         </li>
+        <?php
+          if($_SESSION['loggedin']){
+            echo "<li class='nav-item'><a href='myaccount.php' class='nav-link'>My Account</a></li>";
+          }
+        ?>
       </ul>
       <?php
           if(!$_SESSION['loggedin']){
