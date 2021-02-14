@@ -42,3 +42,14 @@ function getFavCoins($userId){
   $stmt->closeCursor();
   return $userCoins;
 }
+
+function delFavCoin($favId, $userId){
+  require('db/connection.php');
+  $sql = 'DELETE FROM coins 
+          WHERE user_id = :userId AND fav_id = :favId';
+  $stmt = $db->prepare($sql);
+  $stmt->bindValue(':userId', $userId, PDO::PARAM_INT);
+  $stmt->bindValue(':favId', $favId, PDO::PARAM_INT);
+  $stmt->execute();
+  $stmt->closeCursor();
+}
