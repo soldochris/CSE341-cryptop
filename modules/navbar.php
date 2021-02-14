@@ -12,7 +12,7 @@
           <a class="nav-link" href="top100.php">Top 100</a>
         </li>
         <?php 
-          if($_SESSION[loggedin]){
+          if(isset($_SESSION[loggedin])){
             echo  "
             <li class='nav-item'>
               <a class='nav-link' href='myaccount.php'>Top 100</a>
