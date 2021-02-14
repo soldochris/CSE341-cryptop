@@ -11,15 +11,7 @@
         <li class="nav-item">
           <a class="nav-link" href="top100.php">Top 100</a>
         </li>
-        <?php 
-          if(isset($_SESSION[loggedin])){
-            echo  "
-            <li class='nav-item'>
-              <a class='nav-link' href='myaccount.php'>Top 100</a>
-            </li>
-            ";
-          }
-        ?>
+        
       </ul>
       <a href="signin.php" class="btn btn-outline-success my-2 my-sm-0">Sign Up</a>
     </div>
