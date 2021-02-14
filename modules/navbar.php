@@ -11,11 +11,13 @@
         <li class="nav-item">
           <a class="nav-link" href="top100.php">Top 100</a>
         </li>
-        <?php
-          echo "hi";
-          var_dump($_SESSION['loggedin']);
-        ?>
       </ul>
-      <a href="signin.php" class="btn btn-outline-success my-2 my-sm-0">Sign Up</a>
+      <?php
+          if(!$_SESSION['loggedin']){
+            echo "<a href='signin.php' class='btn btn-outline-success my-2 my-sm-0'>Sign Up</a>";
+          }else{
+            echo "<a href='signin.php' class='btn btn-outline-danger my-2 my-sm-0'>Log out</a>";
+          }
+        ?>
     </div>
   </nav>
