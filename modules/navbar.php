@@ -21,7 +21,7 @@
           if(!$_SESSION['loggedin']){
             echo "<a href='signin.php' class='btn btn-outline-success my-2 my-sm-0'>Sign Up</a>";
           }else{
-            echo "<a href='signin.php' class='btn btn-outline-danger my-2 my-sm-0'>Log out</a>";
+            echo "<a href='logout.php' class='btn btn-outline-danger my-2 my-sm-0'>Log out</a>";
           }
         ?>
     </div>
