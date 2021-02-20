@@ -41,7 +41,7 @@
         //var_dump($userCoins);
         echo "<ul>";
         for($i = 0;$i < sizeOf($userCoins); $i++){
-          echo "<li class='mb-3'><a class='mr-2'>{$userCoins[$i]['coin_name']}</a><a href=delFav.php?fav={$userCoins[$i]['fav_id']} class='btn btn-danger btn-sm'>Delete</a></li>";
+          echo "<li class='mb-3'><a class='mr-2' href='coinInfo.php?coin={$userCoins[$i]['fav_id']}'>{$userCoins[$i]['coin_name']}</a><a href='delFav.php?fav={$userCoins[$i]['fav_id']}' class='btn btn-danger btn-sm'>Delete</a></li>";
         }
         echo "</ul>";
       }else{
@@ -59,13 +59,12 @@
       }
       echo "</ul>";
     ?>
-
-    <?php //var_dump($_SESSION['userData']); ?>
   </main>
 
   <?php require_once('modules/footer.php'); ?>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
 </body>
 </html>
