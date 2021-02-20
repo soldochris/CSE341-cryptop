@@ -23,24 +23,6 @@
       <input type="submit" value="Create Account" class="btn btn-primary mb-2 mt-2">
       <a  class="btn btn-success mb-2 mt-2" href="login.php">Log In</a>
     </form>
-
-    <div class="alert alert-dismissible alert-warning">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <h4 class="alert-heading">Warning!</h4>
-      <p class="mb-0">Temporarily you will be able to see the list of users  just to test the database.</p>
-    </div>
-    <?php
-      require('db/connection.php');
-      if(isset($db)){
-        foreach ($db->query('SELECT *  FROM users') as $row)
-        {
-          echo 'User: ' . $row['user_name'];
-          echo ' E-mail: ' . $row['user_email'];
-          echo '<br/>';
-        }
-      }
-      
-    ?>
   </main>
 
   <?php require_once('modules/footer.php'); ?>
