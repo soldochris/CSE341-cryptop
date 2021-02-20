@@ -16,14 +16,17 @@
   <?php require_once('modules/navbar.php'); ?>
 
   <main class="container container-fluid mt-4">
-  <?php
-    if(isset($coinId)){
-      $url = 'https://api.coinlore.net/api/ticker/?id=' . $coinId;
-      echo $url . '<br>';
-      $coinInfo = json_decode( file_get_contents($url), true );
-      var_dump($coinInfo);
-    }
-  ?>
+    <div class="card" style="width: 18rem;">
+    <?php
+      if(isset($coinId)){
+        $url = 'https://api.coinlore.net/api/ticker/?id=' . $coinId;
+        $coinInfo = json_decode( file_get_contents($url), true );
+        //var_dump($coinInfo);
+        echo $coinInfo[0]['name'];
+      }
+    ?>
+    </div>
+
   </main>
 
   <?php require_once('modules/footer.php'); ?>
