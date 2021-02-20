@@ -16,7 +16,7 @@
   <?php require_once('modules/navbar.php'); ?>
 
   <main class="container container-fluid mt-4">
-    <div class="card" style="width: 18rem;">
+    <div class="card text-center" >
     <?php
       if(isset($coinId)){
         $url = 'https://api.coinlore.net/api/ticker/?id=' . $coinId;
@@ -24,7 +24,12 @@
         //var_dump($coinInfo);
         echo "
         <img class='card-img-top' src='https://www.coinlore.com/img/{$coinInfo[0]['nameid']}.png' alt='Card image cap'>
-        <h5 class='card-title'>{$coinInfo[0]['name']}</h5>
+        <div class='card-body'>
+          <h5 class='card-title'>{$coinInfo[0]['name']}</h5>
+          <p class='card-text'>Symbol:<span class='text-info'>>{$coinInfo[0]['symbol']}</span></p>
+        </div>
+        
+
         ";
       }
     ?>
