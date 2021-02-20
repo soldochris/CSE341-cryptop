@@ -16,16 +16,15 @@
   <?php require_once('modules/navbar.php'); ?>
 
   <main class="container container-fluid mt-4">
-    <div class="card text-center" >
+    <div class="card text-center" style="max-width:20em;">
     <?php
       if(isset($coinId)){
         $url = 'https://api.coinlore.net/api/ticker/?id=' . $coinId;
         $coinInfo = json_decode( file_get_contents($url), true );
-        //var_dump($coinInfo);
         echo "
         <img class='card-img-top' src='https://www.coinlore.com/img/{$coinInfo[0]['nameid']}.png' alt='Card image cap' style='width:10em;'>
         <div class='card-body'>
-          <h5 class='card-title'>{$coinInfo[0]['name']}</h5>
+          <h5 class='card-title display-4'>{$coinInfo[0]['name']}</h5>
           <p class='card-text'>Symbol: <span class='text-info'>{$coinInfo[0]['symbol']}</span></p>
           <p class='card-text'>Ranking: <span class='text-info'>{$coinInfo[0]['rank']}</span></p>
           <p class='card-text'>Price: $<span class='text-info'>{$coinInfo[0]['price_usd']}</span></p>
@@ -39,13 +38,11 @@
           <p class='card-text'>Total Supply: <span class='text-info'>{$coinInfo[0]['tsupply']}</span></p>
           <p class='card-text'>Max Supply: <span class='text-info'>{$coinInfo[0]['msupply']}</span></p>
         </div>
-        
-
         ";
       }
     ?>
     </div>
-
+    <a href="myaccount.php" class="btn btn-info">Back to my Favorites</a>
   </main>
 
   <?php require_once('modules/footer.php'); ?>
