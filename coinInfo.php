@@ -26,7 +26,9 @@
         <img class='card-img-top' src='https://www.coinlore.com/img/{$coinInfo[0]['nameid']}.png' alt='Card image cap' style='width:10em;'>
         <div class='card-body'>
           <h5 class='card-title'>{$coinInfo[0]['name']}</h5>
-          <p class='card-text'>Symbol:<span class='text-info'>>{$coinInfo[0]['symbol']}</span></p>
+          <p class='card-text'>Symbol:<span class='text-info'>{$coinInfo[0]['symbol']}</span></p>
+          <p class='card-text'>Ranking:<span class='text-info'>{$coinInfo[0]['rank']}</span></p>
+          <p class='card-text'>Price:<span class='text-info'>${$coinInfo[0]['price_usd']}</span></p>
         </div>
         
 
