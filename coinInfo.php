@@ -37,7 +37,7 @@
           <p class='card-text'>Circulating Supply: <span class='text-info'>{$coinInfo[0]['csupply']}</span></p>
           <p class='card-text'>Price BTC: <span class='text-info'>{$coinInfo[0]['price_btc']}btc</span></p>
           <p class='card-text'>Total Supply: <span class='text-info'>{$coinInfo[0]['tsupply']}</span></p>
-          <p class='card-text'>Max Supply: <span class='text-info'>{$coinInfo[0]['msupply]}</span></p>
+          <p class='card-text'>Max Supply: <span class='text-info'>{$coinInfo[0]['msupply']}</span></p>
         </div>
         
 
