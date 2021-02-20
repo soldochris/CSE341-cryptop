@@ -22,7 +22,9 @@
         $url = 'https://api.coinlore.net/api/ticker/?id=' . $coinId;
         $coinInfo = json_decode( file_get_contents($url), true );
         //var_dump($coinInfo);
-        echo $coinInfo[0]['name'];
+        echo "
+        <img class='card-img-top' src='https://www.coinlore.com/img/{$coinInfo[0]['nameid']}.png' alt='Card image cap'>
+        ";
       }
     ?>
     </div>
