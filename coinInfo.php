@@ -9,14 +9,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cryptop - My Account</title>
+  <title>Cryptop - Coin Info</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <?php require_once('modules/navbar.php'); ?>
 
   <main class="container container-fluid mt-4">
-    <div class="card text-center" style="max-width:20em;">
+    <div class="card text-center mx-auto" style="max-width:30em;">
     <?php
       if(isset($coinId)){
         $url = 'https://api.coinlore.net/api/ticker/?id=' . $coinId;
