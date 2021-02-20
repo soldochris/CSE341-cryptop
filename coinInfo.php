@@ -24,6 +24,7 @@
         //var_dump($coinInfo);
         echo "
         <img class='card-img-top' src='https://www.coinlore.com/img/{$coinInfo[0]['nameid']}.png' alt='Card image cap'>
+        <h5 class='card-title'>{$coinInfo[0]['name']}</h5>
         ";
       }
     ?>
