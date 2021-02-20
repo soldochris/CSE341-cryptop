@@ -1,6 +1,6 @@
 <?php
   session_start();
-  if(isset($_GET['coin'])){
+  if(isset($_POST['loggin'])){
     require('functions.php');
 
     $newFav = $_GET['coin'];
@@ -10,6 +10,8 @@
 
     addFavCoin($newFav, $coinName, $userId);
     header('Location: myaccount.php');
+  }else{
+    header('Location: signin.php');
   }
 
 ?>
