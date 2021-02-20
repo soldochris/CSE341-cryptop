@@ -22,7 +22,7 @@
         $url = 'https://api.coinlore.net/api/ticker/?id=' . $coinId;
         $coinInfo = json_decode( file_get_contents($url), true );
         echo "
-        <img class='card-img-top mt-4 mr-4' src='https://www.coinlore.com/img/{$coinInfo[0]['nameid']}.png' alt='Card image cap' style='width:10em;'>
+        <img class='card-img-top mt-3 ml-3' src='https://www.coinlore.com/img/{$coinInfo[0]['nameid']}.png' alt='Card image cap' style='width:10em;'>
         <div class='card-body'>
           <h5 class='card-title display-4'>{$coinInfo[0]['name']}</h5>
           <p class='card-text'>Symbol: <span class='text-info'>{$coinInfo[0]['symbol']}</span></p>
