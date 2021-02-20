@@ -23,7 +23,7 @@
         $coinInfo = json_decode( file_get_contents($url), true );
         //var_dump($coinInfo);
         echo "
-        <img class='card-img-top' src='https://www.coinlore.com/img/{$coinInfo[0]['nameid']}.png' alt='Card image cap'>
+        <img class='card-img-top' src='https://www.coinlore.com/img/{$coinInfo[0]['nameid']}.png' alt='Card image cap' style='width:10em;'>
         <div class='card-body'>
           <h5 class='card-title'>{$coinInfo[0]['name']}</h5>
           <p class='card-text'>Symbol:<span class='text-info'>>{$coinInfo[0]['symbol']}</span></p>
