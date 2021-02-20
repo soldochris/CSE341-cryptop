@@ -18,7 +18,10 @@
   <main class="container container-fluid mt-4">
   <?php
     if(isset($coinId)){
-      var_dump($coinId);
+      $url = 'https://api.coinlore.net/api/ticker/?id=' . $coinId;
+      echo $url . '<br>';
+      $coinInfo = json_decode( file_get_contents($url), true );
+      var_dump($coinInfo);
     }
   ?>
   </main>

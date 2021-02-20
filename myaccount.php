@@ -38,14 +38,12 @@
     <?php 
       $userCoins = getFavCoins($_SESSION['userData']['user_id']);
       if($userCoins){
-        //var_dump($userCoins);
         echo "<ul>";
         for($i = 0;$i < sizeOf($userCoins); $i++){
-          echo "<li class='mb-3'><a class='mr-2' href='coinInfo.php?coin={$userCoins[$i]['fav_id']}'>{$userCoins[$i]['coin_name']}</a><a href='delFav.php?fav={$userCoins[$i]['fav_id']}' class='btn btn-danger btn-sm'>Delete</a></li>";
+          echo "<li class='mb-3'><a class='mr-2' href='coinInfo.php?coin={$userCoins[$i]['coin_id']}'>{$userCoins[$i]['coin_name']}</a><a href='delFav.php?fav={$userCoins[$i]['fav_id']}' class='btn btn-danger btn-sm'>Delete</a></li>";
         }
         echo "</ul>";
       }else{
-        //var_dump($userCoins);
         echo "<p class='text-danger'>You still don't have favorite coins. Please select coins from the following list.</p>";
       }
       
