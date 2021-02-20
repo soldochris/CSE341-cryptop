@@ -14,10 +14,3 @@ CREATE TABLE coins(
 );
 
 
-insert into users (user_name, user_email, user_pass) values ('chris','soldo@chris.com','123456');
-insert into users (user_name, user_email, user_pass) values ('lucio','lucio@mymail.com','123456');
-
-insert into coins (coin,user_id) values (1,1);
-insert into coins (coin,user_id) values (90,1);
-insert into coins (coin,user_id) values (80,1);
-insert into coins (coin,user_id) values (90,2);
