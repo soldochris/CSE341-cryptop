@@ -28,7 +28,8 @@
           <h5 class='card-title'>{$coinInfo[0]['name']}</h5>
           <p class='card-text'>Symbol:<span class='text-info'>{$coinInfo[0]['symbol']}</span></p>
           <p class='card-text'>Ranking:<span class='text-info'>{$coinInfo[0]['rank']}</span></p>
-          <p class='card-text'>Price:<span class='text-info'>${$coinInfo[0]['price_usd']}</span></p>
+          <p class='card-text'>Price: $<span class='text-info'>{$coinInfo[0]['price_usd']}</span></p>
+          <p class='card-text'>24H:<span class='text-info'>{$coinInfo[0]['percent_change_24h']}%</span></p>
         </div>
         
 
